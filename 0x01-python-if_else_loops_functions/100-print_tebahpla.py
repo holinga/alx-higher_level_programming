@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-for x in range(122, 96, -1):
-    if (x % 2) == 0:
-        letter = x
-    else:
-        letter = x - 32
-    print("{}".format(chr(letter)), end='')
+
+is_upper = False
+
+for i in range(25, -1, -1):
+    value = i + ord('A') if is_upper else i + ord('a')
+    print("{:c}".format(value), end="")
+    is_upper = not is_upper

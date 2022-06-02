@@ -1,7 +1,14 @@
 #!/usr/bin/python3
+
 def remove_char_at(str, n):
-    if n >= 0:
-        copystr = str[:n] + str[n + 1:]
-    else:
-        copystr = str[:]
-    return (copystr)
+    """
+    Removes a character at a given index in a string
+
+    Args:
+        str: string
+        n: integer
+
+    Return:
+        A copy of the string with the character at index n removed
+    """
+    return str[:] if n < 0 else str[:n] + str[n + 1:]
